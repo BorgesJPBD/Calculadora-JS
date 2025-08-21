@@ -2,42 +2,55 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Calculadora Básica</title>
+  <title>Calculadora (estilo Windows)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Calculadora</h1>
+  <div class="app">
+    <header class="top">
+      <span class="titulo">Padrão</span>
+    </header>
 
-  
-  <input id="tela" type="text" placeholder="0" readonly>
+    <div id="display" class="display" aria-live="polite">0</div>
 
-  
-  <div class="teclas">
-    
-    <button data-valor="7">7</button>
-    <button data-valor="8">8</button>
-    <button data-valor="9">9</button>
-    <button data-valor="/">/</button>
+    <div class="grade" id="teclas">
+      
+      <button data-val="7">7</button>
+      <button data-val="8">8</button>
+      <button data-val="9">9</button>
+      <button data-op="×" class="op">×</button>
 
-    
-    <button data-valor="4">4</button>
-    <button data-valor="5">5</button>
-    <button data-valor="6">6</button>
-    <button data-valor="*">*</button>
+     
+      <button data-val="4">4</button>
+      <button data-val="5">5</button>
+      <button data-val="6">6</button>
+      <button data-op="−" class="op">−</button>
 
-    
-    <button data-valor="1">1</button>
-    <button data-valor="2">2</button>
-    <button data-valor="3">3</button>
-    <button data-valor="-">-</button>
+      
+      <button data-val="1">1</button>
+      <button data-val="2">2</button>
+      <button data-val="3">3</button>
+      <button data-op="+" class="op">+</button>
 
-    <button data-valor="0">0</button>
-    <button data-valor=".">.</button>
-    <button id="limpar">C</button>
-    <button data-valor="+">+</button>
+     
+      <button data-action="invert">+/−</button>
+      <button data-val="0">0</button>
+      <button data-val="," aria-label="vírgula">,</button>
+      
+      <button id="igual" class="igual">=</button>
 
-    
-    <button id="igual" class="igual">=</button>
+      
+      <span class="vazio"></span>
+      <span class="vazio"></span>
+      <span class="vazio"></span>
+      <span class="vazio"></span>
+    </div>
+
+    <div class="linha-util">
+      <button id="limpar" class="util">C</button>
+      <button data-op="÷" class="util">÷</button>
+      <button id="backspace" class="util">⌫</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
