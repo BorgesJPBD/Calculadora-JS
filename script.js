@@ -54,7 +54,7 @@ function limparTudo(){ primeiro=null; operador=null; aguardandoSegundo=false; at
 function backspace(){ if(aguardandoSegundo) return; atual = (atual.length<=1)?'0':atual.slice(0,-1); mostrar(atual); }
 function inverter(){ if(atual==='0') return; atual = atual.startsWith('-')?atual.slice(1):'-'+atual; mostrar(atual); }
 
-// cliques
+
 teclas.addEventListener('click',(e)=>{
   const b = e.target.closest('button'); if(!b) return;
   if (b.dataset.val) inputDigito(b.dataset.val);      
